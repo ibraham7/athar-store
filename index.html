@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>أثَر ATHAR — أزياء وعطور فاخرة</title>
+  <meta name="description" content="أثَر — متجر أزياء وعطور فاخرة: عبايات، أزياء نسائية ورجالية، وعطور شرقية وفرنسية مركّزة. توصيل سريع وطلب مباشر عبر واتساب.">
+  <meta name="theme-color" content="#0F0D0C">
+  <meta property="og:title" content="أثَر ATHAR — أزياء وعطور فاخرة">
+  <meta property="og:description" content="ما تلبسه يُرى، وما تتعطّر به يُذكَر.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1762605135376-ae5af70a5628?auto=format&fit=crop&w=1200&h=630&q=70">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=El+Messiri:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<!-- Logo symbol (reused everywhere) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mark" viewBox="0 0 64 84" fill="none">
+    <path class="m-hook" d="M32 21V15.5C32 11.6 34.8 8.5 38.3 8.5C41.6 8.5 44 11 43.4 14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+    <path class="m-arch" d="M12 80V41A20 20 0 0 1 52 41V80" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+    <path class="m-inner" d="M18.5 80V42A13.5 13.5 0 0 1 45.5 42V80" stroke="currentColor" stroke-width="1" opacity=".55"/>
+    <path class="m-drop" d="M32 46C32 46 25 55.4 25 61.2A7 7 0 0 0 39 61.2C39 55.4 32 46 32 46Z" fill="currentColor"/>
+    <path class="m-base" d="M6 80H58" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<!-- Loader -->
+<div class="loader" id="loader" aria-hidden="true">
+  <svg class="loader__mark"><use href="#mark"/></svg>
+  <div class="loader__word">ATHAR</div>
+  <div class="loader__bar"><span></span></div>
+</div>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="topbar__in">
+    <a href="#" class="topbar__item" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+      <span>@athar.store</span>
+    </a>
+    <span class="topbar__sep"></span>
+    <span class="topbar__item topbar__promo">شحن مجاني للطلبات فوق 200$ · استبدال خلال 14 يوماً</span>
+    <span class="topbar__sep"></span>
+    <a href="#contact" class="topbar__item" dir="ltr">+90 000 000 00 00</a>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="header__in">
+    <a href="#top" class="brand" aria-label="أثر — الصفحة الرئيسية">
+      <svg class="brand__mark"><use href="#mark"/></svg>
+      <span class="brand__text">
+        <span class="brand__name">ATHAR</span>
+        <span class="brand__sub">SCENT · STYLE</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav" aria-label="القائمة الرئيسية">
+      <a href="#shop" data-filter="all">المتجر</a>
+      <a href="#collections">المجموعات</a>
+      <a href="#signature">عطر التوقيع</a>
+      <a href="#finder">اكتشف عطرك</a>
+      <a href="#lookbook">إطلالات</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn" id="searchBtn" aria-label="بحث">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      </button>
+      <button class="icon-btn cart-btn" id="cartBtn" aria-label="السلة">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8L5 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="burger" id="burger" aria-label="القائمة" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="searchbar" id="searchbar">
+    <input type="search" id="searchInput" placeholder="ابحث عن عباية، عطر عود، قميص…" aria-label="بحث في المتجر">
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero__media">
+      <img src="https://images.unsplash.com/photo-1762605135376-ae5af70a5628?auto=format&fit=crop&w=2000&q=75" alt="عارضتان بعبايات بيج وكريمية تحت قوس" fetchpriority="high">
+    </div>
+    <div class="hero__shade"></div>
+    <div class="hero__content wrap">
+      <p class="eyebrow hero__eyebrow"><span class="dash"></span>مجموعة خريف وشتاء 2026</p>
+      <h1 class="hero__title">
+        <span class="line"><span>أناقةٌ تُرى،</span></span>
+        <span class="line"><span>وعطرٌ <em>يُذكَر</em></span></span>
+        <span class="line"><span>طويلاً.</span></span>
+      </h1>
+      <p class="hero__lead">أزياء منتقاة بخامات فاخرة، وعطور مركّزة تُصنع بإتقان — لتترك أثرك أينما مررت.</p>
+      <div class="hero__cta">
+        <a href="#shop" class="btn btn--gold" data-filter="clothing"><span class="btn__dot"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg></span>تسوّق الأزياء</a>
+        <a href="#shop" class="btn btn--ghost" data-filter="perfume">اكتشف العطور</a>
+      </div>
+    </div>
+    <div class="hero__card">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.6"/><circle cx="17" cy="17.5" r="1.6"/></svg>
+      <div><strong>توصيل خلال 2–5 أيام</strong><span>تغليف هدايا مجاني لكل طلب</span></div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true"><span></span>مرّر</div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>عبايات</span><i>✦</i><span>عود ملكي</span><i>✦</i><span>قمصان كتان</span><i>✦</i><span>مسك أبيض</span><i>✦</i><span>معاطف صوف</span><i>✦</i><span>عنبر</span><i>✦</i><span>فساتين حرير</span><i>✦</i><span>ورد طائفي</span><i>✦</i>
+      <span>عبايات</span><i>✦</i><span>عود ملكي</span><i>✦</i><span>قمصان كتان</span><i>✦</i><span>مسك أبيض</span><i>✦</i><span>معاطف صوف</span><i>✦</i><span>عنبر</span><i>✦</i><span>فساتين حرير</span><i>✦</i><span>ورد طائفي</span><i>✦</i>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about section">
+    <div class="wrap about__grid">
+      <div class="about__visual reveal">
+        <div class="about__img">
+          <img src="https://images.unsplash.com/photo-1718985342149-7178154e0aee?auto=format&fit=crop&w=1000&q=70" alt="داخل بوتيك أثر" loading="lazy">
+        </div>
+        <div class="badge" aria-hidden="true">
+          <svg viewBox="0 0 200 200" class="badge__ring">
+            <defs><path id="circ" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs>
+            <text><textPath href="#circ">ATHAR · SCENT &amp; STYLE · SINCE 2026 · </textPath></text>
+          </svg>
+          <svg class="badge__mark"><use href="#mark"/></svg>
+        </div>
+        <div class="float-card reveal" data-delay="2">
+          <span class="float-card__icon">✦</span>
+          <div><strong>خامات منتقاة يدوياً</strong><span>كتان، صوف، حرير وكريب ياباني</span></div>
+        </div>
+      </div>
+      <div class="about__text">
+        <p class="eyebrow reveal"><span class="dash"></span>قصّتنا</p>
+        <h2 class="h2 reveal">لأن الأناقة لا تكتمل<br>إلا <em>بعطرٍ</em> يشبهك</h2>
+        <p class="lead reveal">بدأت «أثَر» من فكرة بسيطة: القطعة الجميلة تلفت النظر، لكن العطر هو ما يبقى في الذاكرة. لذلك جمعنا الاثنين في مكان واحد — أزياء بقصّات هادئة وخامات تدوم، وعطور مركّزة بتركيبات شرقية وفرنسية تُصنع على دفعات صغيرة.</p>
+        <ul class="features">
+          <li class="reveal"><span class="features__n">01</span><div><strong>جودة بلا مساومة</strong><p>كل قطعة تُفحص قبل الشحن، قطعةً قطعة.</p></div></li>
+          <li class="reveal"><span class="features__n">02</span><div><strong>عطور بتركيز عالٍ</strong><p>Extrait & Parfum بثبات يتجاوز 12 ساعة.</p></div></li>
+          <li class="reveal"><span class="features__n">03</span><div><strong>مقاسات حسب طلبك</strong><p>تعديل الطول والأكمام للعبايات مجاناً.</p></div></li>
+          <li class="reveal"><span class="features__n">04</span><div><strong>استبدال سهل</strong><p>خلال 14 يوماً بدون أي تعقيد.</p></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COLLECTIONS -->
+  <section class="collections section section--ink" id="collections">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow reveal"><span class="dash"></span>المجموعات</p>
+          <h2 class="h2 reveal">خمس مجموعات،<br><em>أسلوب واحد</em></h2>
+        </div>
+        <p class="sec-head__note reveal">مرّر على أي مجموعة لتفتحها، واضغط لتتسوّقها</p>
+      </div>
+      <div class="accordion reveal" id="accordion">
+        <!-- filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section class="shop section" id="shop">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow reveal"><span class="dash"></span>المتجر</p>
+          <h2 class="h2 reveal">اختر قطعتك،<br>واختم بـ<em>عطرك</em></h2>
+        </div>
+        <div class="sort reveal">
+          <label for="sortSel">ترتيب:</label>
+          <select id="sortSel">
+            <option value="featured">المميّز</option>
+            <option value="new">الأحدث</option>
+            <option value="low">السعر: من الأقل</option>
+            <option value="high">السعر: من الأعلى</option>
+          </select>
+        </div>
+      </div>
+      <div class="filters reveal" id="filters" role="tablist">
+        <button class="chip is-active" data-filter="all">الكل</button>
+        <button class="chip" data-filter="clothing">الأزياء</button>
+        <button class="chip" data-filter="abaya">العبايات</button>
+        <button class="chip" data-filter="women">نسائي</button>
+        <button class="chip" data-filter="men">رجالي</button>
+        <button class="chip" data-filter="perfume">العطور</button>
+        <button class="chip" data-filter="oriental">شرقي</button>
+        <button class="chip" data-filter="floral">زهري وفرنسي</button>
+      </div>
+      <p class="shop__count" id="shopCount"></p>
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="empty" hidden>لا توجد منتجات تطابق بحثك. جرّب كلمة أخرى.</p>
+    </div>
+  </section>
+
+  <!-- SIGNATURE PERFUME -->
+  <section class="signature section section--ink" id="signature">
+    <div class="wrap signature__grid">
+      <div class="signature__text">
+        <p class="eyebrow reveal"><span class="dash"></span>عطر التوقيع</p>
+        <h2 class="h2 reveal">ذهب <em>أثَر</em></h2>
+        <p class="lead reveal">عطرنا الأشهر. افتتاحية مشرقة من الزعفران والبرغموت، يتوسّطها الورد الطائفي، وتستقر على قاعدة دافئة من العود والعنبر والمسك.</p>
+        <p class="hint reveal">مرّر على النقاط لتكتشف طبقات العطر</p>
+        <div class="pyramid reveal" id="pyramid">
+          <button class="pyramid__row is-active" data-note="top"><span class="pyramid__k">المقدّمة</span><span class="pyramid__v">زعفران · برغموت · هيل</span></button>
+          <button class="pyramid__row" data-note="heart"><span class="pyramid__k">القلب</span><span class="pyramid__v">ورد طائفي · ياسمين · بخور</span></button>
+          <button class="pyramid__row" data-note="base"><span class="pyramid__k">القاعدة</span><span class="pyramid__v">عود كمبودي · عنبر · مسك أبيض</span></button>
+        </div>
+        <div class="specs reveal">
+          <div><span>التركيز</span><strong>Extrait</strong></div>
+          <div><span>الثبات</span><strong>+14 ساعة</strong></div>
+          <div><span>الفوحان</span><strong>قوي</strong></div>
+          <div><span>الحجم</span><strong>50 / 100 ml</strong></div>
+        </div>
+        <div class="signature__buy reveal">
+          <span class="price-lg">120$</span>
+          <button class="btn btn--gold" data-quick="p2">أضف إلى السلة</button>
+        </div>
+      </div>
+      <div class="signature__visual reveal">
+        <div class="signature__img">
+          <img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59f75?auto=format&fit=crop&w=1100&q=75" alt="زجاجة عطر ذهبية على قماش أبيض" loading="lazy">
+          <button class="spot" data-note="top" style="top:24%;right:46%" aria-label="المقدّمة"><span></span></button>
+          <button class="spot" data-note="heart" style="top:48%;right:34%" aria-label="القلب"><span></span></button>
+          <button class="spot" data-note="base" style="top:70%;right:58%" aria-label="القاعدة"><span></span></button>
+          <div class="spot-tip" id="spotTip"></div>
+        </div>
+        <span class="signature__year">2026</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="wrap stats__grid">
+      <div class="stat reveal"><strong data-count="12000">0</strong><span>+ عميل سعيد</span></div>
+      <div class="stat reveal"><strong data-count="48">0</strong><span>+ تركيبة عطر</span></div>
+      <div class="stat reveal"><strong data-count="320">0</strong><span>+ قطعة أزياء</span></div>
+      <div class="stat reveal"><strong data-count="4.9" data-dec="1">0</strong><span>تقييم العملاء</span></div>
+    </div>
+  </section>
+
+  <!-- SCENT FINDER -->
+  <section class="finder section" id="finder">
+    <div class="wrap finder__grid">
+      <div>
+        <p class="eyebrow reveal"><span class="dash"></span>اكتشف عطرك</p>
+        <h2 class="h2 reveal">ثلاثة أسئلة،<br>و<em>عطرٌ</em> يشبهك</h2>
+        <p class="lead reveal">لا تعرف من أين تبدأ؟ أجب عن ثلاثة أسئلة قصيرة ونرشّح لك العطر الأقرب لشخصيتك.</p>
+        <div class="finder__steps reveal" id="finderSteps">
+          <span class="is-active">01</span><span>02</span><span>03</span><span>✦</span>
+        </div>
+      </div>
+      <div class="quiz reveal" id="quiz" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- LOOKBOOK -->
+  <section class="lookbook section section--ink" id="lookbook">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow reveal"><span class="dash"></span>إطلالات الموسم</p>
+          <h2 class="h2 reveal">تصاميم <em>تصنع الفرق</em></h2>
+        </div>
+        <div class="lb-nav reveal">
+          <span class="lb-count" id="lbCount">01 / 06</span>
+          <button class="round-btn" id="lbPrev" aria-label="السابق"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 6l6 6-6 6"/></svg></button>
+          <button class="round-btn" id="lbNext" aria-label="التالي"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 6l-6 6 6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="lb-track" id="lbTrack"></div>
+    <div class="wrap"><div class="lb-progress"><span id="lbBar"></span></div></div>
+  </section>
+
+  <!-- GIFT BOX -->
+  <section class="gift section">
+    <div class="wrap gift__grid">
+      <div class="gift__text">
+        <p class="eyebrow reveal"><span class="dash"></span>صندوق الهدايا</p>
+        <h2 class="h2 reveal">هديّة تُفتح<br>و<em>تُذكَر</em></h2>
+        <p class="lead reveal">اختر عطراً وقطعة، ونغلّفهما لك في صندوق «أثَر» الخشبي مع بطاقة بخط اليد — جاهز للإهداء.</p>
+        <ul class="checks reveal">
+          <li>صندوق فاخر بشريط ذهبي</li>
+          <li>بطاقة إهداء مكتوبة بخط اليد</li>
+          <li>عيّنة عطر إضافية مجاناً</li>
+          <li>إخفاء السعر من الفاتورة</li>
+        </ul>
+        <a href="#shop" class="btn btn--dark reveal" data-filter="perfume">جهّز هديّتك</a>
+      </div>
+      <div class="gift__visual reveal">
+        <div class="giftbox" id="giftbox" tabindex="0" aria-label="صندوق هدايا أثر">
+          <div class="giftbox__glow"></div>
+          <div class="giftbox__lid">
+            <div class="giftbox__ribbon-h"></div>
+            <div class="giftbox__bow"><span></span><span></span></div>
+          </div>
+          <div class="giftbox__base">
+            <div class="giftbox__ribbon-v"></div>
+            <div class="giftbox__logo"><svg><use href="#mark"/></svg><span>ATHAR</span></div>
+          </div>
+          <div class="giftbox__bottle"></div>
+        </div>
+        <p class="gift__hint">مرّر لفتح الصندوق</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews section section--sand">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--center reveal"><span class="dash"></span>آراء عملائنا</p>
+      <h2 class="h2 h2--center reveal">كلامهم <em>أثرٌ</em> أيضاً</h2>
+      <div class="reviews__grid">
+        <figure class="review reveal"><div class="stars">★★★★★</div><blockquote>«عباية سحر أجمل من الصور، والقماش ثقيل ومريح. وصلت مغلّفة كأنها هدية.»</blockquote><figcaption>— ريم، الرياض</figcaption></figure>
+        <figure class="review reveal" data-delay="1"><div class="stars">★★★★★</div><blockquote>«ليل العود صار عطري اليومي. الثبات خرافي، يبقى على الشماغ لثاني يوم.»</blockquote><figcaption>— عبدالله، الكويت</figcaption></figure>
+        <figure class="review reveal" data-delay="2"><div class="stars">★★★★★</div><blockquote>«طلبت صندوق هدايا لأختي، والبطاقة المكتوبة بخط اليد كانت لمسة رائعة.»</blockquote><figcaption>— لينا، عمّان</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section section--ink" id="contact">
+    <div class="wrap contact__grid">
+      <div>
+        <p class="eyebrow reveal"><span class="dash"></span>تواصل معنا</p>
+        <h2 class="h2 reveal">نحن هنا<br>لـ<em>مساعدتك</em></h2>
+        <p class="lead reveal">استشارة مقاسات، اقتراح عطر، أو طلب خاص — راسلنا ويرد عليك فريقنا خلال ساعات.</p>
+        <div class="contact__list">
+          <a class="contact__item reveal" href="#" data-wa><span>واتساب</span><strong dir="ltr">+90 000 000 00 00</strong></a>
+          <a class="contact__item reveal" href="mailto:hello@athar.store"><span>البريد الإلكتروني</span><strong>hello@athar.store</strong></a>
+          <div class="contact__item reveal"><span>ساعات العمل</span><strong>يومياً 10:00 – 22:00</strong></div>
+        </div>
+      </div>
+      <form class="form reveal" id="contactForm" novalidate>
+        <div class="form__head"><strong>أرسل رسالة</strong><span>تصلنا مباشرة على واتساب</span></div>
+        <label class="field"><span>الاسم</span><input name="name" required autocomplete="name"></label>
+        <label class="field"><span>المدينة</span><input name="city" autocomplete="address-level2"></label>
+        <div class="field"><span>الموضوع</span>
+          <div class="pills" id="topicPills">
+            <button type="button" class="pill is-active">استشارة مقاسات</button>
+            <button type="button" class="pill">اقتراح عطر</button>
+            <button type="button" class="pill">طلب خاص</button>
+            <button type="button" class="pill">أخرى</button>
+          </div>
+        </div>
+        <label class="field"><span>رسالتك</span><textarea name="msg" rows="3" required></textarea></label>
+        <button class="btn btn--gold btn--full" type="submit">أرسل عبر واتساب</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <svg class="footer__mark"><use href="#mark"/></svg>
+        <div><div class="footer__name">ATHAR</div><div class="footer__ar">أثَر — ما تلبسه يُرى، وما تتعطّر به يُذكَر.</div></div>
+      </div>
+      <form class="newsletter" id="newsletter">
+        <label for="nlEmail">اشترك ليصلك الجديد أولاً</label>
+        <div class="newsletter__row"><input id="nlEmail" type="email" placeholder="بريدك الإلكتروني" required><button class="btn btn--gold" type="submit">اشترك</button></div>
+      </form>
+    </div>
+    <div class="footer__cols">
+      <div><h4>تسوّق</h4><a href="#shop" data-filter="abaya">العبايات</a><a href="#shop" data-filter="women">نسائي</a><a href="#shop" data-filter="men">رجالي</a><a href="#shop" data-filter="perfume">العطور</a></div>
+      <div><h4>المساعدة</h4><a href="#contact">دليل المقاسات</a><a href="#contact">الشحن والتوصيل</a><a href="#contact">الاستبدال والإرجاع</a><a href="#contact">تتبّع الطلب</a></div>
+      <div><h4>أثَر</h4><a href="#top">قصّتنا</a><a href="#signature">عطر التوقيع</a><a href="#finder">اكتشف عطرك</a><a href="#lookbook">إطلالات الموسم</a></div>
+      <div><h4>الدفع</h4><div class="pay"><span>Visa</span><span>Mastercard</span><span>Apple Pay</span><span>الدفع عند الاستلام</span></div></div>
+    </div>
+    <div class="footer__bottom"><span>© 2026 ATHAR. جميع الحقوق محفوظة.</span><span><a href="brand.html" style="text-decoration:underline">هوية العلامة</a> · صور المنتجات للعرض من Unsplash</span></div>
+  </div>
+  <div class="footer__giant" aria-hidden="true">ATHAR</div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="wa-float" href="#" data-wa aria-label="تواصل عبر واتساب">
+  <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.5c.2.2 2.4 3.6 5.7 5 2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3Z"/></svg>
+</a>
+
+<!-- Cart drawer -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="سلة التسوق" aria-hidden="true">
+  <div class="drawer__head">
+    <strong>سلّتك <span id="drawerCount"></span></strong>
+    <button class="icon-btn" id="drawerClose" aria-label="إغلاق"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  </div>
+  <div class="ship-meter"><p id="shipText"></p><div class="ship-meter__bar"><span id="shipBar"></span></div></div>
+  <div class="drawer__items" id="drawerItems"></div>
+  <div class="drawer__foot" id="drawerFoot">
+    <div class="drawer__row"><span>المجموع</span><strong id="subtotal">0$</strong></div>
+    <div class="drawer__fields">
+      <input id="coName" placeholder="الاسم" autocomplete="name">
+      <input id="coCity" placeholder="المدينة / الدولة" autocomplete="address-level2">
+    </div>
+    <button class="btn btn--gold btn--full" id="checkout">إتمام الطلب عبر واتساب</button>
+    <p class="drawer__note">نؤكد الطلب وطريقة الدفع معك على واتساب.</p>
+  </div>
+</aside>
+
+<!-- Quick view modal -->
+<div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal__box" id="modalBox"></div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

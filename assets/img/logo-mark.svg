@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 84" fill="none">
+  <title>ATHAR mark</title>
+  <!-- hanger hook (fashion) -->
+  <path d="M32 21V15.5C32 11.6 34.8 8.5 38.3 8.5C41.6 8.5 44 11 43.4 14" stroke="#C8A165" stroke-width="2.6" stroke-linecap="round"/>
+  <!-- arch / bottle silhouette -->
+  <path d="M12 80V41A20 20 0 0 1 52 41V80" stroke="#C8A165" stroke-width="2.6" stroke-linejoin="round"/>
+  <path d="M18.5 80V42A13.5 13.5 0 0 1 45.5 42V80" stroke="#C8A165" stroke-width="1" opacity=".55"/>
+  <!-- scent drop (perfume) -->
+  <path d="M32 46C32 46 25 55.4 25 61.2A7 7 0 0 0 39 61.2C39 55.4 32 46 32 46Z" fill="#C8A165"/>
+  <!-- base -->
+  <path d="M6 80H58" stroke="#C8A165" stroke-width="2.6" stroke-linecap="round"/>
+</svg>
